@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali</title>
+
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./bg.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            width: 400px;
+            z-index: 10;
+        }
+
+        .diya {
+            width: 200px;
+        }
+
+        .diya-2 {
+            height: 100px;
+            width: 100px;
+        }
+
+        .diya-3 {
+            height: 100px;
+            width: 100px;
+        }
+
+        .center-animation {
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: motion 15s infinite;
+        }
+
+        .center-animation-1 {
+            width: 100px;
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            z-index: 1;
+            animation: motion 5s infinite;
+        }
+
+        .center-animation-2 {
+            width: 100px;
+            position: absolute;
+            bottom: 10%;
+            right: 0%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: motion 5s infinite;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 10%;
+            font-family: sans-serif;
+            font-size: 52px;
+            font-weight: bold;
+        }
+
+        @keyframes motion {
+            from {
+                transform: translate(-50%, -50%) rotate(0);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./diya.png" alt="diya" class="diya-2" />
+        <img src="./diya.png" alt="diya" class="diya" />
+        <img src="./diya.png" alt="diya" class="diya-3" />
+        <img src="animation.png" alt="animation" class="center-animation" />
+        <img src="animation.png" alt="animation" class="center-animation-1" />
+        <img src="animation.png" alt="animation" class="center-animation-2" />
+    </div>
+            <div class="text">Happy Diwali</div>
+</body>
+
+</html>
